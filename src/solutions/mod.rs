@@ -11,6 +11,7 @@ mod sol_6;
 mod sol_69;
 mod sol_7;
 mod sol_73;
+mod sol_8;
 
 lazy_static! {
     pub static ref SOLVERS: HashMap<&'static str, fn() -> u64> = {
@@ -23,6 +24,7 @@ lazy_static! {
         m.insert("5", sol_5::solve as fn() -> u64);
         m.insert("6", sol_6::solve as fn() -> u64);
         m.insert("7", sol_7::solve as fn() -> u64);
+        m.insert("8", sol_8::solve as fn() -> u64);
         m.insert("25", sol_25::solve as fn() -> u64);
         m.insert("69", sol_69::solve as fn() -> u64);
         m.insert("73", sol_73::solve as fn() -> u64);
