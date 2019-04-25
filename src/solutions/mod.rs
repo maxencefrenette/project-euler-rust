@@ -7,6 +7,7 @@ mod sol_2;
 mod sol_25;
 mod sol_3;
 mod sol_4;
+mod sol_494;
 mod sol_5;
 mod sol_6;
 mod sol_69;
@@ -32,6 +33,7 @@ lazy_static! {
         m.insert("25", sol_25::solve as fn() -> u64);
         m.insert("69", sol_69::solve as fn() -> u64);
         m.insert("73", sol_73::solve as fn() -> u64);
+        m.insert("494", sol_494::solve as fn() -> u64);
 
         m
     };
