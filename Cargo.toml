@@ -5,3 +5,4 @@ authors = ["Maxence Frenette <maxence.frenette@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+gcd = "1.2.0"
