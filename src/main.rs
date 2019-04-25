@@ -14,6 +14,7 @@ fn main() {
         "3" => solve_3(),
         "4" => solve_4(),
         "5" => solve_5(),
+        "6" => solve_6(),
         _ => panic!(USAGE),
     };
 
