@@ -1,12 +1,12 @@
 pub struct Fibonacci {
-    a: u32,
-    b: u32,
+    a: u64,
+    b: u64,
 }
 
 impl Iterator for Fibonacci {
-    type Item = u32;
+    type Item = u64;
 
-    fn next(&mut self) -> Option<u32> {
+    fn next(&mut self) -> Option<u64> {
         let tmp = self.a + self.b;
         self.a = self.b;
         self.b = tmp;

@@ -11,6 +11,7 @@ fn main() {
     let solution = match arg.as_str() {
         "1" => solve_1(),
         "2" => solve_2(),
+        "3" => solve_3(),
         _ => panic!(USAGE),
     };
 
