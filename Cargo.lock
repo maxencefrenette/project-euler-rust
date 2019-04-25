@@ -4,11 +4,18 @@ version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "lazy_static"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "project-euler-rust"
 version = "0.1.0"
 dependencies = [
  "gcd 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [metadata]
 "checksum gcd 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c21a76e102bba7724d661dbbba5e483ec0707088be6a01cf3879229e75da4d9f"
+"checksum lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "bc5729f27f159ddd61f4df6228e827e86643d4d3e7c32183cb30a1c08f604a14"
