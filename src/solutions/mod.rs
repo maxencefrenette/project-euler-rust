@@ -3,6 +3,7 @@ use std::collections::HashMap;
 
 mod sol_1;
 mod sol_10;
+mod sol_11;
 mod sol_2;
 mod sol_249;
 mod sol_25;
@@ -33,6 +34,7 @@ lazy_static! {
         m.insert("8", sol_8::solve as fn() -> u64);
         m.insert("9", sol_9::solve as fn() -> u64);
         m.insert("10", sol_10::solve as fn() -> u64);
+        m.insert("11", sol_11::solve as fn() -> u64);
         m.insert("25", sol_25::solve as fn() -> u64);
         m.insert("48", sol_48::solve as fn() -> u64);
         m.insert("69", sol_69::solve as fn() -> u64);
