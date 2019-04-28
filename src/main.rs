@@ -1,5 +1,3 @@
-#![feature(trace_macros)]
-
 use solutions::SOLVERS;
 use std::env;
 
