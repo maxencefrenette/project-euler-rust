@@ -1,4 +1,4 @@
-use solutions::SOLVERS;
+use solutions::SOLUTIONS;
 use std::env;
 
 mod common;
@@ -9,8 +9,8 @@ fn main() {
         .nth(1)
         .expect("Usage: `cargo run -- x`, where x is the problem id.");
 
-    if let Some(solver) = SOLVERS.get(arg.as_str()) {
-        println!("{}", solver());
+    if let Some(solution) = SOLUTIONS.get(arg.as_str()) {
+        solution();
     } else {
         println!("Problem {} isn't solved yet.", arg);
     }

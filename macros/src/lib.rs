@@ -25,14 +25,14 @@ impl Parse for Register {
 pub fn register(input: TokenStream) -> TokenStream {
     let Register { ids } = parse_macro_input!(input as Register);
 
-    let identifiers = ids.iter().map(|id| {
-        Ident::new(format!("sol_{}", id.value()).as_str(), id.span())
-    });
+    let identifiers = ids
+        .iter()
+        .map(|id| Ident::new(format!("sol_{}", id.value()).as_str(), id.span()));
     let identifiers2 = identifiers.clone();
 
-    let string_lits = ids.iter().map(|id| {
-        LitStr::new(format!("{}", id.value()).as_str(), id.span())
-    });
+    let string_lits = ids
+        .iter()
+        .map(|id| LitStr::new(format!("{}", id.value()).as_str(), id.span()));
 
     let expanded = quote! {
         use lazy_static::lazy_static;
@@ -41,11 +41,11 @@ pub fn register(input: TokenStream) -> TokenStream {
         #(mod #identifiers;)*
 
         lazy_static! {
-            pub static ref SOLVERS: HashMap<&'static str, fn() -> u64> = {
+            pub static ref SOLUTIONS: HashMap<&'static str, fn() -> ()> = {
                 let mut m = HashMap::new();
 
                 #(
-                    m.insert(#string_lits, #identifiers2::solve as fn() -> u64);
+                    m.insert(#string_lits, (|| println!("{}", #identifiers2::solve())) as fn() -> ());
                 )*
 
                 m
