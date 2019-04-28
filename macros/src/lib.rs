@@ -27,7 +27,7 @@ pub fn register(input: TokenStream) -> TokenStream {
 
     let identifiers = ids
         .iter()
-        .map(|id| Ident::new(format!("sol_{}", id.value()).as_str(), id.span()));
+        .map(|id| Ident::new(format!("p{}", id.value()).as_str(), id.span()));
     let identifiers2 = identifiers.clone();
 
     let string_lits = ids
