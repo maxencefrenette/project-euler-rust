@@ -1,3 +1,6 @@
+use num_bigint::BigUint;
+use num_traits::cast::ToPrimitive;
+use num_traits::identities::Zero;
 use primal::Sieve;
 
 pub struct Fibonacci {
@@ -33,6 +36,19 @@ pub fn totient(n: u64, sieve: &Sieve) -> u64 {
             p.pow(k) - p.pow(k - 1)
         })
         .product()
+}
+
+pub fn sum_digits(mut n: BigUint) -> u64 {
+    let mut sum = 0;
+
+    while !n.is_zero() {
+        let r = &n % BigUint::from(10u64);
+        sum += r.to_u64().unwrap();
+        n -= r;
+        n /= 10u64;
+    }
+
+    sum
 }
 
 #[cfg(test)]
