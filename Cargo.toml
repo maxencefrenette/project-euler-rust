@@ -16,3 +16,5 @@ num-bigint = "0.2.2"
 num-traits = "0.2.6"
 chrono = "0.4.6"
 project-euler-macros = { version = "0.1.0", path = "./macros" }
+log = "0.4.6"
+env_logger = "0.6.1"

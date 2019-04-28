@@ -1,4 +1,5 @@
 use itertools::Itertools;
+use log::info;
 use primal::Sieve;
 
 pub fn solve() -> isize {
@@ -14,6 +15,8 @@ pub fn solve() -> isize {
                 .count()
         })
         .unwrap();
+
+    info!("a = {}, b = {}", a, b);
 
     a * b
 }
