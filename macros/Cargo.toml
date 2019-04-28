@@ -1,0 +1,12 @@
+[package]
+name = "project-euler-macros"
+version = "0.1.0"
+authors = ["Maxence Frenette <maxence.frenette@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "0.15" }
+quote = "0.6"
