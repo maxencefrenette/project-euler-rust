@@ -51,6 +51,21 @@ pub fn sum_digits(mut n: BigUint) -> u64 {
     sum
 }
 
+/// Computes n^k mod m
+pub fn mod_pow(n: u64, k: u64, m: u64) -> u64 {
+    if k == 0 {
+        return 1;
+    } else if k == 1 {
+        return n;
+    }
+
+    if k % 2 == 0 {
+        mod_pow((n * n) % m, k / 2, m)
+    } else {
+        (k * mod_pow(n, k - 1, m)) % m
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
