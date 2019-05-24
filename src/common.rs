@@ -24,6 +24,28 @@ pub fn fibonacci_iter() -> Fibonacci {
     Fibonacci { a: 0, b: 1 }
 }
 
+pub struct Digits {
+    num: u64,
+}
+
+impl Iterator for Digits {
+    type Item = u64;
+
+    fn next(&mut self) -> Option<u64> {
+        if self.num != 0 {
+            let rem = self.num % 10;
+            self.num /= 10;
+            Some(rem)
+        } else {
+            None
+        }
+    }
+}
+
+pub fn digits(num: u64) -> Digits {
+    Digits { num }
+}
+
 pub fn totient(n: u64, sieve: &Sieve) -> u64 {
     let factors = sieve.factor(n as usize).unwrap();
 
