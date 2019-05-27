@@ -2,6 +2,7 @@ use num_bigint::BigUint;
 use num_traits::cast::ToPrimitive;
 use num_traits::identities::Zero;
 use primal::Sieve;
+use std::ops::Mul;
 
 pub struct Fibonacci {
     a: u64,
@@ -71,6 +72,10 @@ pub fn sum_digits(mut n: BigUint) -> u64 {
     }
 
     sum
+}
+
+pub fn factorial(n: u64) -> u64 {
+    (1..=n).fold(1, u64::mul)
 }
 
 /// Computes n^k mod m
