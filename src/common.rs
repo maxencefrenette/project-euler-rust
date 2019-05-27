@@ -1,6 +1,6 @@
-use num_bigint::BigUint;
-use num_traits::cast::ToPrimitive;
-use num_traits::identities::Zero;
+use num::bigint::BigUint;
+use num::traits::cast::ToPrimitive;
+use num::traits::identities::Zero;
 use primal::Sieve;
 use std::ops::Mul;
 
