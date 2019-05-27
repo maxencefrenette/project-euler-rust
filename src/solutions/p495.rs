@@ -14,6 +14,7 @@ pub fn choose(n: u64, k: u64) -> u64 {
     (n..(n - k)).fold(1, mul)
 }
 
+// TODO: 1..n should be 1..=n
 pub fn fact(n: u64) -> u64 {
     (1..n).fold(1, mul)
 }
